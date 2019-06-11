@@ -4,8 +4,8 @@ from mysql.connector import errorcode
 DB_NAME = 'test10'
 config = {
 	
-	'user': 'xxx', 
-	'password': 'xxx',
+	'user': 'Mathieu', 
+	'password': 'borisfdp92',
     'host':'localhost',
     #'database':'test10',
     'raise_on_warnings': True
