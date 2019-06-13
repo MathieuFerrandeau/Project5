@@ -1,7 +1,7 @@
 FIELDS = {
 	
-	'user': 'Mathieu', 
-	'password': 'borisfdp92',
+	'user': 'xxx'
+	'password': 'xxx'
     'host':'localhost',
     #'database':'Openfoodfact'
     'raise_on_warnings': True
