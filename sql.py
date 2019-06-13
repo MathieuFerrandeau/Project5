@@ -41,11 +41,10 @@ except mysql.connector.Error as err:
 def create_tables():
     with open("createdb.sql", "r") as file:
         query = file.read()
-        try: 
-            cursor.execute(query)
-        except mysql.connector.Error as err:    
-            print(err)
+    cursor.execute(query)
+    create_tables() 
+create_tables() 
 
-create_tables()    
+
 cursor.close()
 cnx.close()

@@ -74,3 +74,21 @@ cnx.close()
 url openfoodfact fr
 
 https://fr.openfoodfacts.org/categorie/viandes
+
+
+
+-----
+
+def get_category():
+    res = requests.get("https://fr.openfoodfacts.org/categories&json=1")
+    data_json = res.json()
+    data_tags = data_json.get('tags')
+    data_cat = [d.get('name') for d in data_tags]
+
+    for category in data_cat[:10]:
+        pass
+    add_category = ("INSERT INTO Category" "(name)" "VALUES('{}')".format(category))
+    cursor.execute(add_category)
+    cnx.commit()
+   
+get_category()
