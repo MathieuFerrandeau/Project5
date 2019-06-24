@@ -92,3 +92,23 @@ def get_category():
     cnx.commit()
    
 get_category()
+
+---
+
+
+insert a une valeur
+
+sql = "INSERT INTO Category (name) VALUES (%s)"
+#val = [('Peter',), ('rachid',)]
+
+cursor.executemany(sql, val)
+cnx.commit()"""
+
+-----
+remplit les tables a partir du fichier.sql
+
+"""with open("createdb.sql", "r") as file:
+    query = file.read()
+cursor.execute(query)"""
+
+supprr def connect db et use db 
