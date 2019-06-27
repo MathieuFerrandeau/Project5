@@ -1,4 +1,4 @@
-Project 5: use public data from OpenFoodFacts
+<strong>Project 5: use public data from OpenFoodFacts</strong>
 
 
 This project uses openfoodfacts data to allow a user to choose from a product list a substitute with a nutriscore superior or equivalent to the chosen product.
