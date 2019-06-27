@@ -5,7 +5,11 @@ from init import Init
 def main():
     """Main function"""
 
-    prog = Program()
+    try:
+        prog = Program()
+    except:
+        print("Something is wrong with your user name or password")
+        exit(1)
 
     run = True
     while run:
