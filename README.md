@@ -12,8 +12,7 @@ As well as to save this substitute so as to retrieve the information that intere
 <li>And finally run the main.py file.</li>
 </ol>
 
-<ul>Once the connection is established the user has two possibilities: 
+Once the connection is established the user has two possibilities: 
 <li>Select from a list of 10 categories a product to have substitutes with a nutriscore equivalent or higher, 
 to choose one and have the possibility to save it or not in its list of substitutes.</li>
 <li>The possibility to consult its list of surrogates registered beforehand (empty if first connection).</li>
-</ul>
