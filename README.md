@@ -21,9 +21,12 @@ to choose one and have the possibility to save it or not in its list of substitu
 
 <ul><strong>sql.py:</strong><br>	
 	<li>In init we pass all the parameters of authenticity in parameter.</li>
-	<li>First method, we use these parameters to create the database.</li>
-	<li>Second method, we use all the parameters to connect to the database.</li>
-	<li>Third method, we create the tables of the database thanks to the .sql file.</li>
+	<li>First method we use these parameters to create the database.</li>
+	<li>Second method we use all the parameters to connect to the database.</li>
+	<li>Third method we create the tables of the database thanks to the .sql file.</li>
 </ul>
 
-<ul><strong>collect_data.py:</strong><br></ul>
+<ul><strong>collect_data.py:</strong><br>
+	<li>The first method retrieves API categories and insert 10 in the Category table.</li>
+	<li>The second method retrieves 20 products for each category from the Category table and inserts them into the Product table.</li>
+</ul>
