@@ -1,18 +1,32 @@
-import mysql.connector
-from mysql.connector import errorcode 
-from config import * 
-from sql import * 
-from collect_data import *
-
+"""Main file"""
+from program import Program
+from init import Init
 
 def main():
-	sql = Sql(FIELDS['user'],FIELDS['password'],FIELDS['host'])
-	data = CollectData()
+    """Main function"""
 
-	sql.create_db(DB_NAME)
-	sql.create_tables()
-	data.insert_category()
-	data.get_food(10)
+    prog = Program()
 
+    run = True
+    while run:
+        prog.consult_substitutes()
+        prog.show_category()
+        prog.show_product()
+        prog.show_substitute()
 
-main()
+        run = prog.continu()
+
+ARG = None
+
+try:
+    INIT_DB = Init()
+    ARG = INIT_DB.arg()
+
+except AttributeError:
+    pass
+
+if __name__ == "__main__":
+    if ARG is True:
+        ARG
+    else:
+        main()

@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS Product (
   nutriscore varchar(4) NOT NULL,
   category smallint(3) NOT NULL,
   PRIMARY KEY (id),
-  CONSTRAINT fk_product FOREIGN KEY (Category) REFERENCES Category(id) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT fk_product FOREIGN KEY (category) REFERENCES Category(id) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB;
 
 -- Table substitue
@@ -29,6 +29,3 @@ CREATE TABLE IF NOT EXISTS Substitute (
   CONSTRAINT fk_product_to_substitute FOREIGN KEY (id_product_to_substitute) REFERENCES Product (id) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB;
 
-#ALTER TABLE Product ADD CONSTRAINT fk_product FOREIGN KEY (Category) REFERENCES Category(id) ON DELETE CASCADE ON UPDATE CASCADE;
-#ALTER TABLE Substitute ADD CONSTRAINT fk_substitute_product FOREIGN KEY (id_substitute_product) REFERENCES Product (id) ON DELETE CASCADE ON UPDATE CASCADE;
-#ALTER TABLE Substitute ADD CONSTRAINT fk_product_to_substitute FOREIGN KEY (id_product_to_substitute) REFERENCES Product (id) ON DELETE CASCADE ON UPDATE CASCADE;
