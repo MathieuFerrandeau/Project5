@@ -30,3 +30,20 @@ to choose one and have the possibility to save it or not in its list of substitu
 	<li>The first method retrieves API categories and insert 10 in the Category table.</li>
 	<li>The second method retrieves 20 products for each category from the Category table and inserts them into the Product table.</li>
 </ul>
+
+<ul><strong>init.py</strong><br>
+	<li>The method allows you to initialize the database with the methods of classes Sql and Colledata (from its creation to repmlissage).</li>
+</ul>
+
+<ul><strong>program.py:</strong><br>
+	<li>The first method displays the 10 categories.</li>
+	<li>The second method displays 20 products according to the chosen category</li>
+	<li>The third method is to display a substitute that has a nutrient equivalent or greater than the product previously selected with the possibility to save it in the database or not.</li>
+	<li>The fourth method allows the user once all completed steps to return to the main menu or exit the application.</li>
+	<li>Finally the last method allows the user to consult his list of registered surrogates (empty if first use).</li>
+</ul>
+
+<ul><strong>main.py:</strong><br>
+	<li>The main file can be called two ways, the first using an argument (-i or --init) will create and fill the database thanks to the class Init.
+And the second, by executing it without argument, it will launch the application that will allow the interaction between the user and the program.</li>
+</ul>
