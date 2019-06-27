@@ -3,6 +3,8 @@
 This project uses openfoodfacts data to allow a user to choose from a product list a substitute with a nutriscore superior or equivalent to the chosen product.   
 As well as to save this substitute so as to retrieve the information that interest the user like the name, stores where to buy it and an url link with all the features of the product.
 
+<strong>Database used: MYSQL</strong>
+
 <h2>How to use it:</h2>
 
 <ol>
@@ -47,3 +49,4 @@ to choose one and have the possibility to save it or not in its list of substitu
 	<li>The main file can be called two ways, the first using an argument (-i or --init) will create and fill the database thanks to the class Init.
 And the second, by executing it without argument, it will launch the application that will allow the interaction between the user and the program.</li>
 </ul>
+
