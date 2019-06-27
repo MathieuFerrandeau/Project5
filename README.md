@@ -16,3 +16,5 @@ Once the connection is established the user has two possibilities:
 <li>Select from a list of 10 categories a product to have substitutes with a nutriscore equivalent or higher, 
 to choose one and have the possibility to save it or not in its list of substitutes.</li>
 <li>The possibility to consult its list of surrogates registered beforehand (empty if first connection).</li>
+
+<h2>Operation:</h2>
