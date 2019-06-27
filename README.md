@@ -5,7 +5,7 @@ As well as to save this substitute so as to retrieve the information that intere
 
 <h2>How to use it:</h2>
 
-<ul>You have to:</ul>
+<ol></ol>
 <li>Change FIELDS in config.py file with your own mysql credentials.</li>
 <li>Enter the following command in you consol : pip install -r requirements.txt</li>
 <li>Enter the following command : python3 main.py -i (or --init) .</li>
