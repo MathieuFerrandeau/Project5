@@ -19,7 +19,7 @@ to choose one and have the possibility to save it or not in its list of substitu
 
 <h2>Operation:</h2>
 
-<ul><strong>sql.py:</strong></br>	
+<ul><br><strong>sql.py:</strong></br>	
 	<li>In init we pass all the parameters of authenticity in parameter.</li>
 	<li>First method, we use these parameters to create the database.</li>
 	<li>Second method, we use all the parameters to connect to the database.</li>
