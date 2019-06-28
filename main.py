@@ -8,7 +8,7 @@ def main():
     try:
         prog = Program()
     except:
-        print("Something is wrong with your user name or password")
+        print("Something is wrong with your user name, password or host.")
         exit(1)
 
     run = True

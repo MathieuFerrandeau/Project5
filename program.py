@@ -117,7 +117,7 @@ class Program:
         save = ()
         while save not in ['Y', 'N']:
             save = input('\nDo you want to save this substitute?\n"Y" or "N"\n').upper()
-
+            
         if save == "Y":
             query = ("INSERT INTO Substitute \
                     (id_product_to_substitute, id_substitute_product) VALUES ({}, {})".format(
@@ -157,11 +157,13 @@ class Program:
                             "2 - Show your substitutes ?\n"
                         ).upper()
                     )
+                    if response not in [1, 2]:
+                        print("\nYou have to choose between 1 or 2.")
 
                 break
 
             except ValueError:
-                print("It has to be a number")
+                print("\nIt has to be a number")
 
         if response == 2:
             query = ("SELECT name, nutriscore, store, link \
