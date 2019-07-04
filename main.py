@@ -4,11 +4,10 @@ from init import Init
 
 def main():
     """Main function"""
-
     try:
         prog = Program()
     except:
-        print("Something is wrong with your user name, password or host.")
+        print('Run the main.py file with "-i" or "--init" at first.')
         exit(1)
 
     run = True

@@ -73,3 +73,4 @@ class CollectData:
                 cursor.execute(add_food, data)
                 self.cnx.commit()
             cursor.close()
+        print("Products added.")

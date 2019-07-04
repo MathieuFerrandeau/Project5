@@ -25,7 +25,7 @@ to choose one and have the possibility to save it or not in its list of substitu
 	<li>In init we pass all the parameters of authenticity in parameter.</li>
 	<li>First method we use these parameters to create the database.</li>
 	<li>Second method we use all the parameters to connect to the database.</li>
-	<li>Third method we create the tables of the database thanks to the .sql file.</li>
+	<li>Third method we create the tables of the database with the .sql file.</li>
 </ul>
 
 <ul><strong>collect_data.py:</strong><br>
@@ -34,7 +34,7 @@ to choose one and have the possibility to save it or not in its list of substitu
 </ul>
 
 <ul><strong>init.py</strong><br>
-	<li>The method allows you to initialize the database with the methods of classes Sql and Colledata (from its creation to repmlissage).</li>
+	<li>The method allows you to initialize the database with the methods of classes Sql and CollectData (from creation to filling).</li>
 </ul>
 
 <ul><strong>program.py:</strong><br>

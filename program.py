@@ -54,7 +54,7 @@ class Program:
         while True:
             try:
                 self.id_product_choose = int(input("\nChoose id product: \n"))
-                self.id_product_choose = self.id_product_choose + coef
+                self.id_product_choose = self.id_product_choose + coef              
                 get_nutriscore = ("SELECT nutriscore \
                 	FROM Product WHERE id={} \
                 	AND category={}".format(self.id_product_choose, self.cat_id))
@@ -63,20 +63,21 @@ class Program:
                 break
             except ValueError:
                 print("It has to be a number")
-            except KeyError:
+            except IndexError:
                 print("You have to choose a good number for cat")
 
         cursor.close()
-        print("The product you choose have this nutriscore : {} \n\n".format(
+        print("\nThe product you choose have this nutriscore : {} \n\n".format(
             self.nutriscore_product_choose
         ))
+
 
     def show_substitute(self):
         """Show the substitutes"""
         cursor = self.cnx.cursor()
         query = ("SELECT id, name, nutriscore, store, link \
             FROM Product WHERE nutriscore <= '{}' \
-            AND category={} AND id !={} ".format(
+            AND category={} AND id !={}".format(
                 self.nutriscore_product_choose,
                 self.cat_id,
                 self.id_product_choose
@@ -117,7 +118,7 @@ class Program:
         save = ()
         while save not in ['Y', 'N']:
             save = input('\nDo you want to save this substitute?\n"Y" or "N"\n').upper()
-            
+
         if save == "Y":
             query = ("INSERT INTO Substitute \
                     (id_product_to_substitute, id_substitute_product) VALUES ({}, {})".format(
@@ -180,7 +181,7 @@ class Program:
             for result in results:
                 print(
                     "{}. {} with nutriscore : {}.\n"
-                    "can buy at {} more information on this link : \n{}"
+                    "can buy at {} more information on this link : \n{}\n"
                     .format(
                         i, result[0], result[1], result[2], result[3]
                     )

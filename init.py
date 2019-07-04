@@ -11,12 +11,16 @@ class Init:
 
     def init_db(self):
         """Uses class methods to create and fill the DB"""
-        sql = Sql(**FIELDS)
-        sql.create_db(DB_NAME)
-        sql.create_tables()
-        data = CollectData()
-        data.insert_category()
-        data.get_food(20)
+        try:
+            sql = Sql(**FIELDS)
+            sql.create_db(DB_NAME)
+            sql.create_tables()
+            data = CollectData()
+            data.insert_category()
+            data.get_food(20)
+        except:
+            print("Something is wrong with your user name, password or host. Check in config.py.")
+            exit(1)
 
     def arg(self):
         """ADD the --init argument"""
