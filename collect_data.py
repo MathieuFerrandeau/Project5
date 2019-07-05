@@ -41,8 +41,8 @@ class CollectData:
             payload = {
                 'action': 'process',
                 'tagtype_0': 'categories', #which subject is selected (categories)
-                'tag_contains_0': 'contains', #contains or not
-                'tag_0': '{}'.format(cat_saved), #parameters to choose
+                'tag_contains_0': 'contains', 
+                'tag_0': '{}'.format(cat_saved), 
                 'sort_by': 'unique_scans_n',
                 'page_size': '{}'.format(nb_food),
                 'countries': 'France',
@@ -61,9 +61,9 @@ class CollectData:
                 name = str(prod_name_saved[j])
                 store_saved = [d.get('stores') for d in test2]
                 store = str(store_saved[j])
-                link_saved = [d.get('url') for d in test2] #get ingredients list in french
+                link_saved = [d.get('url') for d in test2] 
                 link = str(link_saved[j])
-                nutri_grd_saved = [d.get('nutrition_grade_fr') for d in test2] #get nutrigrade
+                nutri_grd_saved = [d.get('nutrition_grade_fr') for d in test2] 
                 nutri_grd = str(nutri_grd_saved[j])
                 add_food = (
                     "INSERT INTO Product"
