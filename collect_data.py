@@ -52,18 +52,18 @@ class CollectData:
 
             r_food = requests.get('https://fr.openfoodfacts.org/cgi/search.pl', params=payload)
             food_json = r_food.json()
-            test2 = food_json.get('products')
+            food = food_json.get('products')
             food_id = ("SELECT id FROM Category WHERE id = "+cat_nb_1)
             cursor.execute(food_id)
 
             for j in range(nb_food):
-                prod_name_saved = [d.get('product_name_fr') for d in test2]
+                prod_name_saved = [d.get('product_name_fr') for d in food]
                 name = str(prod_name_saved[j])
-                store_saved = [d.get('stores') for d in test2]
+                store_saved = [d.get('stores') for d in food]
                 store = str(store_saved[j])
-                link_saved = [d.get('url') for d in test2] 
+                link_saved = [d.get('url') for d in food] 
                 link = str(link_saved[j])
-                nutri_grd_saved = [d.get('nutrition_grade_fr') for d in test2] 
+                nutri_grd_saved = [d.get('nutrition_grade_fr') for d in food] 
                 nutri_grd = str(nutri_grd_saved[j])
                 add_food = (
                     "INSERT INTO Product"
