@@ -1,8 +1,8 @@
 """Config file"""
 FIELDS = {
-    'user': 'projet5',
-    'password': 'mdpp5',
-    'host':'localhost',
+    'user': '',
+    'password': '',
+    'host':'',
 
 }
 
