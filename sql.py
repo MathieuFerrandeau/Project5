@@ -5,7 +5,7 @@ from config import DB_NAME
 
 
 class Sql:
-    """Create and use tje database"""
+    """Create and use the database"""
     def __init__(self, user, password, host):
         self.user = str(user)
         self.password = str(password)
