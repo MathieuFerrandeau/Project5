@@ -3,9 +3,9 @@
 import mysql.connector
 from config import DB_NAME
 
+
 class Sql:
     """Create and use tje database"""
-
     def __init__(self, user, password, host):
         self.user = str(user)
         self.password = str(password)
@@ -33,7 +33,6 @@ class Sql:
                 host=self.host
                 )
             return cnx
-
         except mysql.connector.errors.ProgrammingError:
             return False
 
@@ -43,13 +42,11 @@ class Sql:
         cursor = cnx.cursor()
         use_db = ("USE {}".format(DB_NAME))
         cursor.execute(use_db)
-
         try:
             with open('createdb.sql', 'r') as file:
                 query = file.read()
             cursor.execute(query)
             cursor.close()
-
         except:
             pass
     

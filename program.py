@@ -13,7 +13,6 @@ class Program:
         self.id_product_substitute = None
         self.response = ['Y', 'N']
 
-
     def show_category(self):
         """Show the category"""
         cursor = self.cnx.cursor()
@@ -35,7 +34,6 @@ class Program:
                 print("It has to be a number")
             except KeyError:
                 print("You have to choose a good number for cat")
-
         print("You choose {} category\n\n".format(cat_choose))
 
     def show_product(self):
@@ -70,7 +68,6 @@ class Program:
         print("\nThe product you choose have this nutriscore : {} \n\n".format(
             self.nutriscore_product_choose
         ))
-
 
     def show_substitute(self):
         """Show the substitutes"""
@@ -109,7 +106,6 @@ class Program:
                 self.id_product_substitute = int(input("\n Choose id product: \n"))
                 self.id_product_substitute = self.id_product_substitute + coef
                 break
-
             except ValueError:
                 print("It has to be a number")
             except IndexError:
@@ -150,7 +146,6 @@ class Program:
         while True:
             try:
                 response = ()
-
                 while response not in [1, 2]:
                     response = int(
                         input(
@@ -160,9 +155,7 @@ class Program:
                     )
                     if response not in [1, 2]:
                         print("\nYou have to choose between 1 or 2.")
-
                 break
-
             except ValueError:
                 print("\nIt has to be a number")
 

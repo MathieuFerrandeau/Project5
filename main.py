@@ -24,7 +24,6 @@ ARG = None
 try:
     INIT_DB = Init()
     ARG = INIT_DB.arg()
-
 except AttributeError:
     pass
 

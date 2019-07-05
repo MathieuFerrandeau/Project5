@@ -4,6 +4,7 @@ from collect_data import CollectData
 from sql import Sql
 from config import FIELDS, DB_NAME
 
+
 class Init:
     """Takes care of creating and filling the db"""
     def __init__(self):

@@ -3,9 +3,9 @@ import mysql.connector
 import requests
 from config import FIELDS, DB_NAME
 
+
 class CollectData:
     """Takes care of recovering data from OpenFoodFact and inserting them into the database"""
-
     def __init__(self):
         self.cnx = mysql.connector.connect(**FIELDS, database=DB_NAME)
 
